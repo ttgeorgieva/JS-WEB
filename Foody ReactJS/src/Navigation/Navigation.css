@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.navigation {
+    background-color: rgb(163, 222, 240);
+    height: 6em;
+    border-bottom: 2px solid rgb(116, 49, 116);
+    border-top: 2px solid rgb(116, 49, 116);
+    color: rgb(116, 49, 116);
+    text-align: center;
+    font-size: 1em;
+    font-style: italic;
+    
+    
+}
+
+#logo {
+    position: fixed;
+    left: 10px;
+    top: 20px;
+    width: 8%;
+    height: 6vh;
+}
+
+.nav-menu {
+    
+    display: inline-block;
+    list-style: none;
+    width: 85%;
+   
+}
+
+.nav-item {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+}
+
+nav {
+    position: relative;
+    padding: 10px 20px 10px 10px;
+    text-align: right;
+    z-index: 1;
+    margin: 0 auto;
+    width: calc(100% - 30px);
+}

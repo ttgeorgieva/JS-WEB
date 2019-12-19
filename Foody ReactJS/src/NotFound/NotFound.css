@@ -1,0 +1,13 @@
+.errorPage {
+    width: 83%;
+    height: 331px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.errorPage img {
+    width: 250px;
+    margin: 0 auto;
+    display: block;
+}
+
