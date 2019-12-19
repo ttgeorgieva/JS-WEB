@@ -24,7 +24,7 @@ class Comments extends Component {
     if (this.state.isEditing) {
       let comment = {
         text: this.state.text,
-        productId: this.props.productId,
+        recipeId: this.props.recipeId,
         author: JSON.parse(localStorage.getItem('user')).username
       }
       if (comment.text !== '') {
@@ -38,7 +38,8 @@ class Comments extends Component {
   }
 
   render() {
-    let comments = this.state.comments.map((comment, index) => {
+  
+    let comments = this.props.comments.map((comment, index) => {
       return (
         <Comment
           key={comment._id}
@@ -73,7 +74,7 @@ class Comments extends Component {
 }
 
 Comments.propTypes = {
-  productId: PropTypes.string,
+  recipeId: PropTypes.string,
   comments: PropTypes.array.isRequired,
   author: PropTypes.string.isRequired,
   addComment: PropTypes.func.isRequired,

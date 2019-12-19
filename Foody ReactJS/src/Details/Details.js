@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import './Details.css';
 import { Link } from 'react-router-dom'
 
 import * as recipes from '../fetcher/recipes'
@@ -60,20 +61,16 @@ class Details extends Component {
 
     fetchComments(id) {
         comments.getRecipeComments(id).then(comments => {
-            this.setState({ comments: comments })
+            this.setState({ comments })
         })
     }
 
     componentDidMount() {
         let id = this.props.match.params.recipeId
-        console.log(id)
         recipes.getRecipeById(id).then(recipe => {
-            this.setState({
-                recipe: recipe
-            })
-    
+            this.setState({ recipe })
         })
-        
+
         this.fetchComments(id)
         if (this.state.user) {
             this.setState({
@@ -85,7 +82,6 @@ class Details extends Component {
 
     render() {
         let recipe = this.state.recipe
-        console.log(recipe)
         let howToCook = '';
         if (recipe.howToCook && recipe.howToCook.length > 0) {
             howToCook = 'How to cook: ' + recipe.howToCook
@@ -103,7 +99,7 @@ class Details extends Component {
             : ''
 
         let editRecipe = this.props.isLogged ?
-            <button className='App-add-to-favorites-btn'>
+            <button className='App-edit-btn'>
                 <Link className='App-create-link' to={`/edit/${this.props.match.params.recipeId}`}>
                     Edit recipe
                 </Link>
@@ -114,17 +110,17 @@ class Details extends Component {
             <div>
                 {recipe !== {}
                     ? <div>
-                        <div className='App-body-title'>
-                            <p>{recipe.name}</p>
-                            {addToFavorites}
-                            {editRecipe}
+                        <div className='App-body'>
+                        {addToFavorites}
+                            <p className='App-recipe-title'>{recipe.name}</p>
+                            <div className='App-details-img-container'>
+                                <img className='App-details-img' src={this.state.recipe.img} alt={this.state.recipe.name} />
+                            </div>
                         </div>
                         <div className='App-details'>
                             <p>{recipe.ingredients}</p>
                             {howToCook}
-                        </div>
-                        <div className='App-details-img-container'>
-                            <img className='App-details-img' src={this.state.recipe.img} alt={this.state.recipe.name} />
+                            {editRecipe}
                         </div>
                     </div>
                     : 'Loading...'}

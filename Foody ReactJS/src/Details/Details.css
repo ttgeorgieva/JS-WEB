@@ -1,0 +1,85 @@
+.App-body {
+    padding: 10px;
+    margin: 10px;
+}
+
+.App-recipe-title {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+}
+
+.App-add-to-favorites-btn {
+    float: right;
+    border-radius: 3em;
+    border-color: rgb(144, 102, 192);
+    background-color: rgb(178, 165, 206);
+    color: white;
+    height: 2.8em;
+    width: 8.7em;
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+.App-add-to-favorites-btn:hover  {
+    background-color:  rgb(133, 86, 226);
+
+}
+.App-edit-btn {
+    float: right;
+    border-radius: 3em;
+    border-color: rgb(161, 130, 223);
+    background-color: rgb(224, 125, 68);
+    height: 2em;
+    width: 7em;
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+   
+}
+
+.App-edit-btn:hover {
+    background-color:  rgb(133, 86, 226);
+
+}
+
+.App-create-link {
+    text-decoration: none;
+    color: white;
+}
+.App-details-img {
+    padding: 10px;
+    margin: 5px;
+    height: 350px;
+    width: 350px;
+    float: right;
+    clear: right;
+    margin-left: 20px
+}
+
+.App-comments {
+    float: left;
+}
+
+.App-body-title-comments {
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(121, 121, 121);
+}
+
+.App-add-comment {
+    float: left;
+    background-color: rgb(88, 167, 241);
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+    border: 2px solid rgb(219, 219, 219);
+    border-radius: 3em;
+    height: 2.5em;
+    width: 8em;
+}

@@ -1,8 +1,6 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import * as recipesFetcher from '../fetcher/recipes'
-
-import Recipe from './Recipe'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Recipe from './Recipe';
 
 class Recipes extends Component {
 
@@ -14,17 +12,13 @@ class Recipes extends Component {
     }
 }
 
-componentDidMount() {
-  recipesFetcher.getNewRecipes().then(newRecipes => {
-        this.setState({ recipes: newRecipes })
-      })
-}
+
 
   render() {
     let recipesList
-    if (this.state.recipes && this.state.recipes.length > 0) {
+    if (this.props.recipes && this.props.recipes.length > 0 && typeof this.props.recipes !== 'string') {
       recipesList =
-        this.state.recipes.map((recipe, index) => {
+        this.props.recipes.map((recipe, index) => {
           return <Recipe
             key={index}
             recipe={recipe}

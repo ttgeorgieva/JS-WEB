@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { NotificationManager, NotificationContainer } from 'react-notifications'
 import * as users from './fetcher/users'
+import * as recipes from './fetcher/recipes'
 
 import './App.css';
 import Navigation from './Navigation/Navigation';
@@ -14,7 +15,7 @@ import Recipes from './Recipes/Recipes';
 import CreateRecipe from './CreateRecipe/CreateRecipe';
 import Details from './Details/Details';
 import EditRecipe from './Edit/EditRecipe';
-
+import Favorites from './Favorites/Favorites'
 import NotFound from './NotFound/NotFound';
 
 // function render(title, Cmp) {
@@ -29,7 +30,8 @@ class App extends Component {
 
     this.state = {
       user: localStorage.getItem('user'),
-      isLogged: localStorage.getItem('user') ? true : false
+      isLogged: localStorage.getItem('user') ? true : false,
+      recipes: []
     }
   }
 
@@ -68,9 +70,14 @@ class App extends Component {
     })
   }
 
+
   componentDidMount() {
     this.checkIsLogged()
+    recipes.getNewRecipes().then(recipes => {
+      this.setState({ recipes })
+    })
   }
+
   render() {
     return (
       <BrowserRouter>
@@ -80,7 +87,8 @@ class App extends Component {
           <div className='Container'>
             <Switch>
               <Route path='/' exact className="nav-item" component={Home} />
-              <Route path='/recipes' className="nav-item" render={props => <Recipes {...props} createNotification={this.createNotification} />} />
+              <Route path='/favorites' exact className="nav-item" component={Favorites} />
+              <Route path='/recipes' className="nav-item" render={props => <Recipes {...props} recipes={this.state.recipes} createNotification={this.createNotification} />} />
               <Route path='/create-recipe' className="nav-item" render={props => <CreateRecipe {...props} createNotification={this.createNotification}/>} />
               <Route path='/logout' className="nav-item" render={props => <Logout {...props} logout={this.logout} createNotification={this.createNotification} />} />
               <Route path='/register' className="nav-item" render={props => <Register {...props} createNotification={this.createNotification} checkIsLogged={this.checkIsLogged} />} />

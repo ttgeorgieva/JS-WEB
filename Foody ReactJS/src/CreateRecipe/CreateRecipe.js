@@ -31,7 +31,6 @@ class CreateRecipe extends Component {
       img: this.state.imgUrl,
       categoryName: this.props.match.params.categoryName,
     }
-    console.log(recipe)
 
     let toReturn = this.validateRecipe(recipe)
     if (toReturn)
@@ -55,7 +54,7 @@ class CreateRecipe extends Component {
 
   render() {
     return (
-      <div>
+      <div className='App-body-container'>
         <div className='App-body-title'><p>CREATE</p></div>
         <form className='App-auth' onSubmit={this.onSubmit}>
           <p>

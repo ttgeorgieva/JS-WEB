@@ -4,6 +4,8 @@
     height: auto;
     /* border:1px solid blue; */
     margin-bottom: 5%;
+    
+
 }
 
 h1 {
@@ -11,4 +13,9 @@ h1 {
     color:rgb(116, 49, 116);
     text-decoration: underline;
     margin-bottom: 2%;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+    
 }

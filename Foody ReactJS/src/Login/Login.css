@@ -1,5 +1,13 @@
-#loginPic {
-    weight: 100px;
-    height: 100px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('https://img.pngio.com/food-background-images-94-images-in-co-381169-png-images-pngio-food-png-background-1440_619.png') no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: sans-serif;
     
-}    
+}

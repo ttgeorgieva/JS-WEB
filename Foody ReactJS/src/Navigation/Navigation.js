@@ -24,9 +24,11 @@ class Navigation extends Component {
                 <Link to='/' className="nav-item">Home</Link>
                 <Link to='/recipes' className="nav-item">Recipes</Link>
                 <Link to='/create-recipe' className="nav-item">Create Recipe</Link>
+                <Link to='/favorites' className="nav-item">Favorites</Link>
                 <Link to='/logout' className="nav-item">Logout</Link>
             </div>
             : <div>
+                <Link to='/' className="nav-item">Home</Link>
                 <Link to='/login' className="nav-item">Login</Link>
                 <Link to='/register' className="nav-item">Register</Link>
             </div>

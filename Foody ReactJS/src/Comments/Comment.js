@@ -51,13 +51,12 @@ class Comment extends Component {
   }
 
   render() {
-    let isAdmin = JSON.parse(localStorage.getItem('user')).roles[0] === 'Admin'
     let btnText = this.state.isEditing ? 'Save' : 'Edit'
     let commentText = this.state.isEditing
       ? <p><input className='App-comment-edit-input' type='text' value={this.state.text} onChange={(e) => this.inputChange(e, 'text')} required /></p>
       : <p className='App-comment-text'>{' - ' + this.state.comment.text}</p>
 
-    let authorBtns = isAdmin || this.props.isCreator
+    let authorBtns =  this.props.isCreator
       ? <div className='App-comment-btn-wrapper'>
         <button className='App-comment-btn' onClick={this.editClick}>
           {btnText}

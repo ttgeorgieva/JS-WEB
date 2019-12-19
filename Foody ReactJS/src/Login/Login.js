@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import * as users from '../fetcher/users'
+import './Login.css';
+
 
 class Login extends Component {
   constructor(props) {
@@ -38,7 +40,7 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div className='login-container'>
         <div className='App-body-title'><p>LOGIN</p></div>
         <div className='App-body-error'><p>{this.state.error}</p></div>
         <form className='App-auth' onSubmit={this.formSubmit}>
@@ -68,20 +70,3 @@ Login.propTypes = {
 }
 
 export default Login
-//  function Login() {
-//     return <form className='Login'>
-//         <img id='loginPic'alt="loginPicture" src={loginImage}></img>
-//         <div className='form-control'>
-//             <label>Username</label>
-//             <input type='text' />
-//         </div>
-//         <div className="form-control">
-//             <label>Password</label>
-//             <input type='password' />
-//         </div>
-//         <div className='form-control'>
-//             <button type='submit'>Login</button>
-//         </div>
-//     </form>
-// }
-//export default Login

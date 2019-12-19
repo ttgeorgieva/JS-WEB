@@ -40,7 +40,7 @@ export async function updateComment (comment) {
 }
 
 export async function deleteComment (commentId) {
-  await fetch('http://localhost:1337/api/comments/' + commentId, {
+  await fetch('http://localhost:1337/api/comments/commentId=' + commentId, {
     method: 'DELETE'
   })
     .then(res => res.json())

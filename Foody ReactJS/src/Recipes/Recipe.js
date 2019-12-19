@@ -1,12 +1,13 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import './Recipe.css';
 
 class Recipe extends Component {
   render () {
     return (
       <Link className='App-recipe' to={'/details/' + this.props.recipe._id}>
-        <p>{this.props.recipe.name}</p>
+        <p className='Recipe-name'>{this.props.recipe.name}</p>
         <img className='App-img-recipe' src={this.props.recipe.img} alt='foody' />
       </Link>
     )

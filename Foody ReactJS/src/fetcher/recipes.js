@@ -32,6 +32,16 @@ export async function getNewRecipes () {
   return recipes
 }
 
+export async function getRecipesByArray (array) {
+  let recipes = []
+  await fetch('http://localhost:1337/api/recipes/array=' + array)
+    .then(res => res.json())
+    .catch(error => console.error('Error:', error))
+    .then(response => {
+      recipes = response
+    })
+  return recipes
+}
 
 export async function create (recipe) {
   await fetch('http://localhost:1337/api/recipes', {
