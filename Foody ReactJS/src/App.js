@@ -81,14 +81,14 @@ class App extends Component {
           <div className='Container'>
             <Switch>
               <Route path='/' exact className="nav-item" component={Home} />
-              <Route path='/favorites' exact className="nav-item" component={Favorites} />
+              { this.state.isLogged && <Route path='/favorites' exact className="nav-item" component={Favorites} />}
               <Route path='/recipes' className="nav-item" render={props => <Recipes {...props} recipes={this.state.recipes} createNotification={this.createNotification} />} />
-              <Route path='/create-recipe' className="nav-item" render={props => <CreateRecipe {...props} createNotification={this.createNotification} />} />
-              <Route path='/logout' className="nav-item" render={props => <Logout {...props} logout={this.logout} createNotification={this.createNotification} />} />
+              { this.state.isLogged && <Route path='/create-recipe' className="nav-item" render={props => <CreateRecipe {...props} createNotification={this.createNotification} />} />}
+              { this.state.isLogged && <Route path='/logout' className="nav-item" render={props => <Logout {...props} logout={this.logout} createNotification={this.createNotification} />} />}
               <Route path='/register' className="nav-item" render={props => <Register {...props} createNotification={this.createNotification} checkIsLogged={this.checkIsLogged} />} />
               <Route path='/login' className="nav-item" render={props => <Login {...props} login={this.login} createNotification={this.createNotification} checkIsLogged={this.checkIsLogged} />} />
               <Route path='/details/:recipeId' className="nav-item" exact render={props => <Details {...props} isLogged={this.state.isLogged} update={this.update} createNotification={this.createNotification} />} />
-              <Route path='/edit/:recipeId' render={props => <EditRecipe {...props} createNotification={this.createNotification} />} />
+              { this.state.isLogged && <Route path='/edit/:recipeId' render={props => <EditRecipe {...props} createNotification={this.createNotification} />} />}
               <Route path="*" component={NotFound} />
             </Switch>
           </div>
