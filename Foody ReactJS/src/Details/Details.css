@@ -1,9 +1,14 @@
 .App-body {
     padding: 10px;
     margin: 10px;
+    min-height: 100%;
+    
 }
 
 .App-recipe-title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
     font-family: 'Times New Roman', Times, serif, sans-serif;
     font-weight: bold;
     font-style: italic;
@@ -82,4 +87,20 @@
     border-radius: 3em;
     height: 2.5em;
     width: 8em;
+}
+
+.App-ingredients, .App-how-to-cook{
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+}
+
+.App-text {
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    text-align: justify;
+    padding: 6px;
+    margin: 6px;
 }

@@ -5,8 +5,8 @@ import logoFooter from './logo-food.png';
 
 function Footer() {
     return (
-        <div>
-            <footer className='footer'>
+        <div className='footer'>
+            <footer >
                 <div className='container'>
                     <img id='logoFooter' src={logoFooter} alt="my-app-logo"></img>
                     <div className='column'>
@@ -16,14 +16,7 @@ function Footer() {
             </footer>
         </div>
     )
-    //return (<nav className="Footer">
-    // <ul>
-    //<Link to="/">
-    // <img id='logo' src={logo} alt="my-app-logo"></img>
-    // </Link>
-
-    // </ul>
-    //</nav>)
+   
 };
 
 export default Footer;

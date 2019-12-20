@@ -18,12 +18,6 @@ import EditRecipe from './Edit/EditRecipe';
 import Favorites from './Favorites/Favorites'
 import NotFound from './NotFound/NotFound';
 
-// function render(title, Cmp) {
-//   return function ({ match }) {
-//     return <Main title={title}><Cmp match={match} /></Main>
-//   }
-// }
-
 class App extends Component {
   constructor(props) {
     super(props)
@@ -82,14 +76,14 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Navigation isLogged={this.state.isLogged}/>
+          <Navigation isLogged={this.state.isLogged} />
           <NotificationContainer />
           <div className='Container'>
             <Switch>
               <Route path='/' exact className="nav-item" component={Home} />
               <Route path='/favorites' exact className="nav-item" component={Favorites} />
               <Route path='/recipes' className="nav-item" render={props => <Recipes {...props} recipes={this.state.recipes} createNotification={this.createNotification} />} />
-              <Route path='/create-recipe' className="nav-item" render={props => <CreateRecipe {...props} createNotification={this.createNotification}/>} />
+              <Route path='/create-recipe' className="nav-item" render={props => <CreateRecipe {...props} createNotification={this.createNotification} />} />
               <Route path='/logout' className="nav-item" render={props => <Logout {...props} logout={this.logout} createNotification={this.createNotification} />} />
               <Route path='/register' className="nav-item" render={props => <Register {...props} createNotification={this.createNotification} checkIsLogged={this.checkIsLogged} />} />
               <Route path='/login' className="nav-item" render={props => <Login {...props} login={this.login} createNotification={this.createNotification} checkIsLogged={this.checkIsLogged} />} />
@@ -98,7 +92,6 @@ class App extends Component {
               <Route path="*" component={NotFound} />
             </Switch>
           </div>
-
           <Footer />
         </div>
       </BrowserRouter>

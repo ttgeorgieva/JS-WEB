@@ -1,9 +1,11 @@
 .Main {
     display: inline-block;
     width: 83%;
-    height: auto;
     /* border:1px solid blue; */
     margin-bottom: 5%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
     
 
 }

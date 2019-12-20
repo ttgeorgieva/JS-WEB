@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './Details.css';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+
 
 import * as recipes from '../fetcher/recipes'
 import * as comments from '../fetcher/comments'
@@ -84,7 +85,7 @@ class Details extends Component {
         let recipe = this.state.recipe
         let howToCook = '';
         if (recipe.howToCook && recipe.howToCook.length > 0) {
-            howToCook = 'How to cook: ' + recipe.howToCook
+            howToCook = recipe.howToCook
         }
         let user = localStorage.getItem('user')
         let addToFavorites = user
@@ -107,19 +108,21 @@ class Details extends Component {
             : ''
 
         return (
-            <div>
+            <div className='App-body'>
                 {recipe !== {}
                     ? <div>
-                        <div className='App-body'>
-                        {addToFavorites}
+                        <div>
+                            {addToFavorites}
                             <p className='App-recipe-title'>{recipe.name}</p>
                             <div className='App-details-img-container'>
                                 <img className='App-details-img' src={this.state.recipe.img} alt={this.state.recipe.name} />
                             </div>
                         </div>
                         <div className='App-details'>
-                            <p>{recipe.ingredients}</p>
-                            {howToCook}
+                            <p className='App-ingredients'>Ingredients:</p>
+                            <p className='App-text'>{recipe.ingredients}</p>
+                            <p className='App-how-to-cook'>How to cook:</p>
+                            <p className='App-text'>{howToCook}</p>
                             {editRecipe}
                         </div>
                     </div>
