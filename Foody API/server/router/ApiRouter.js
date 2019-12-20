@@ -28,6 +28,16 @@ module.exports = (app) => {
   apiRouter.route('/categories')
     .post(controllers.categories.create)
 
+    apiRouter.route('/comments')
+    .post(controllers.comments.createComment)
+    .put(controllers.comments.updateComment)
+
+  apiRouter.route('/comments/:recipeId')
+    .get(controllers.comments.getCommentsByRecipeId)
+
+  apiRouter.route('/comments/commentId=:commentId')
+    .delete(controllers.comments.deleteComment)
+
   apiRouter.route('/recipes')
     .put(controllers.recipes.updateRecipe)
     .post(controllers.recipes.createRecipe)
