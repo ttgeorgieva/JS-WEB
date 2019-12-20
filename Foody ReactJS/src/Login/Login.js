@@ -40,8 +40,8 @@ class Login extends Component {
 
   render() {
     return (
-      <div className='login-container'>
-        <div className='App-body-title'><p>LOGIN</p></div>
+      <div className='App-body-container'>
+        <div className='App-body-title'><p>Login</p></div>
         <div className='App-body-error'><p>{this.state.error}</p></div>
         <form className='App-auth' onSubmit={this.formSubmit}>
           <p>

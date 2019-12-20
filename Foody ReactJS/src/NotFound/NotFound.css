@@ -6,8 +6,14 @@
 }
 
 .errorPage img {
+    margin-top: 50px;
     width: 250px;
-    margin: 0 auto;
-    display: block;
+    display: inherit;
 }
 
+.errorText {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(138, 80, 185);
+}

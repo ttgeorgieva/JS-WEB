@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-
-import * as recipes from '../fetcher/recipes'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import './CreateRecipe.css';
+import * as recipes from '../fetcher/recipes';
 
 class CreateRecipe extends Component {
   constructor(props) {
@@ -55,7 +55,7 @@ class CreateRecipe extends Component {
   render() {
     return (
       <div className='App-body-container'>
-        <div className='App-body-title'><p>CREATE</p></div>
+        <div className='App-body-title'><p>Create Recipe</p></div>
         <form className='App-auth' onSubmit={this.onSubmit}>
           <p>
             Name<input className='App-form-input' value={this.state.name} onChange={e => this.inputChange(e, 'name')} required />

@@ -1,13 +1,22 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.App-body-container {
+    height: 100%;
+    width: 360px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 140px;
+
 }
 
-body {
-    background: url('https://img.pngio.com/food-background-images-94-images-in-co-381169-png-images-pngio-food-png-background-1440_619.png') no-repeat center;
-    background-attachment: fixed;
-    background-size: cover;
-    font-family: sans-serif;
-    
+.App-body-title {
+    margin: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(138, 80, 185);
+}
+
+.App-auth {
+    text-align: center;
 }

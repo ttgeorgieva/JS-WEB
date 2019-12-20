@@ -61,8 +61,8 @@ class Register extends Component {
   
     render() {
       return (
-        <div>
-          <div><p>REGISTER</p></div>
+        <div className='App-body-container'>
+          <div className='App-body-title'><p>Register</p></div>
           <form className='form-control' onSubmit={this.formSubmit}>
             <p>
               <label>

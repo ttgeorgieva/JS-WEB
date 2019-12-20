@@ -1,3 +1,10 @@
+body {
+  background: url('https://img.pngio.com/food-background-images-94-images-in-co-381169-png-images-pngio-food-png-background-1440_619.png') no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: sans-serif;
+  
+}
 .App {
   text-align: center;
   height: 100%;

@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import './Comment.css';
 
 class Comment extends Component {
   constructor(props) {
@@ -75,7 +76,7 @@ class Comment extends Component {
           {commentText}
         </div>
         {authorBtns}
-        <hr />
+        <br />
       </div>
     )
   }

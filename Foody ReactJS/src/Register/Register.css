@@ -1,0 +1,22 @@
+.App-body-container {
+    height: 100%;
+    width: 360px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 140px;
+
+}
+
+.App-body-title {
+    margin: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(138, 80, 185);
+}
+
+.App-auth {
+    text-align: center;
+}

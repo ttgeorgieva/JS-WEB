@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import './EditRecipe.css';
 
-import * as recipes from '../fetcher/recipes'
+import * as recipes from '../fetcher/recipes';
 
 class EditRecipe extends Component {
   constructor(props) {
@@ -67,20 +68,20 @@ class EditRecipe extends Component {
 
   render() {
     return (
-      <div>
-        <div className='App-body-title'><p>EDIT</p></div>
+      <div className='App-body-container'>
+        <div className='App-body-title'><p>Edit Recipe</p></div>
         <form className='App-auth' onSubmit={this.onSubmit}>
           <p>
-            Name<input className='App-form-input' value={this.state.name} onChange={e => this.inputChange(e, 'name')} required />
+            Recipe`s Name:<input className='App-form-input' value={this.state.name} onChange={e => this.inputChange(e, 'name')} required />
           </p>
           <p>
-            Ingredients<textarea className='App-form-input' value={this.state.ingredients} onChange={e => this.inputChange(e, 'ingredients')} required />
+            Ingredients:<textarea className='App-form-input' value={this.state.ingredients} onChange={e => this.inputChange(e, 'ingredients')} required />
           </p>
           <p>
-            How to cook<textarea className='App-form-input' value={this.state.howToCook} onChange={e => this.inputChange(e, 'how-to-cook')} />
+            How to cook:<textarea className='App-form-input' value={this.state.howToCook} onChange={e => this.inputChange(e, 'how-to-cook')} />
           </p>
           <p>
-            Image Url<input className='App-form-input' type='url' value={this.state.img} onChange={e => this.inputChange(e, 'img')} required />
+            Image Url:<input className='App-form-input' type='url' value={this.state.img} onChange={e => this.inputChange(e, 'img')} required />
           </p>
           <input className='App-form-submit' type='submit' />
         </form>
