@@ -46,13 +46,14 @@ class Login extends Component {
         <form className='App-auth' onSubmit={this.formSubmit}>
           <p>
             <label>
-              Username<input className='App-form-input' type='text' id='username' name='username'
+              <p className='label-title'>Username</p><input className='App-form-input' type='text' id='username' name='username'
                 value={this.state.username} onChange={(e) => this.inputChange(e, 'username')} required />
+                
             </label>
           </p>
           <p>
             <label>
-              Password<input className='App-form-input' type='password' id='password' name='password'
+            <p className='label-title'>Password</p><input className='App-form-input' type='password' id='password' name='password'
                 value={this.state.password} onChange={(e) => this.inputChange(e, 'password')} required />
             </label>
           </p>

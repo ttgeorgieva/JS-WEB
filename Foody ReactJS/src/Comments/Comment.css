@@ -4,3 +4,11 @@
     display: inline-block;
     
   }
+
+  .App-comment-text, .App-comment-name,.App-comment-time{
+      font-size: 13px;
+  }
+
+  .App-comment-text {
+      display: inline-block;
+  }

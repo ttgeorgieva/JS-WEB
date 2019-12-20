@@ -65,19 +65,19 @@ class Register extends Component {
           <div className='App-body-title'><p>Register</p></div>
           <form className='form-control' onSubmit={this.formSubmit}>
             <p>
-              <label>
+              <label className='label-title'>
                 Username<input className='form-control' type='text' id='username' name='username'
                   value={this.state.username} onChange={(e) => this.inputChange(e, 'username')} required />
               </label>
             </p>
             <p>
-              <label>
+              <label className='label-title'>
                 Password<input className='form-control' type='password' id='password' name='password'
                   value={this.state.password} onChange={(e) => this.inputChange(e, 'password')} required />
               </label>
             </p>
             <p>
-              <label>
+              <label className='label-title'>
                 Confirm Password<input className='form-control' type='password' id='repassword' name='repassword'
                   value={this.state.repassword} onChange={(e) => this.inputChange(e, 'repassword')} required />
               </label>

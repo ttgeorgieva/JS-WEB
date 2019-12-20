@@ -58,17 +58,17 @@ class CreateRecipe extends Component {
         <div className='App-body-title'><p>Create Recipe</p></div>
         <form className='App-auth' onSubmit={this.onSubmit}>
           <p>
-            Name<input className='App-form-input' value={this.state.name} onChange={e => this.inputChange(e, 'name')} required />
+            Name</p>
+            <input className='App-form-input' value={this.state.name} onChange={e => this.inputChange(e, 'name')} required />
+          <p>
+            Ingredients</p>
+            <input className='App-form-field' type='text' value={this.state.ingredients} onChange={e => this.inputChange(e, 'ingredients')} required />
+          <p>
+            How to cook<textarea className='App-form-text' value={this.state.value} onChange={e => this.inputChange(e, 'howToCook')} required />
           </p>
           <p>
-            Ingredients<input className='App-form-input' type='text' value={this.state.ingredients} onChange={e => this.inputChange(e, 'ingredients')} required />
-          </p>
-          <p>
-            How to cook<textarea className='App-form-input' value={this.state.value} onChange={e => this.inputChange(e, 'howToCook')} required />
-          </p>
-          <p>
-            Image Url<input className='App-form-input' type='url' value={this.state.imgUrl} onChange={e => this.inputChange(e, 'imgUrl')} required />
-          </p>
+            Image Url</p>
+            <input className='App-form-input' type='url' value={this.state.imgUrl} onChange={e => this.inputChange(e, 'imgUrl')} required />
           <input className='App-form-submit' type='submit' />
         </form>
       </div>

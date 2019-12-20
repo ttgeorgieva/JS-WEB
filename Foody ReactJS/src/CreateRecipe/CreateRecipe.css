@@ -6,6 +6,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 140px;
+   
 
 }
 
@@ -19,4 +20,49 @@
 
 .App-auth {
     text-align: center;
+    
 }
+
+.label-title {
+    margin:5px
+    
+}
+.App-form-submit{
+    padding: 4px 10px 4px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    outline: none;
+    display: block;
+    margin: 10px auto 4px auto;
+    text-align: center;
+    border: 1px solid rgb(165, 95, 187);
+    transition: all .2s ease-in-out;
+    color:  rgb(81, 44, 92);
+    background-color: rgb(126, 227, 235);
+}
+
+.App-form-submit:hover {
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .App-form-input {
+    border-radius: 5px;
+    height: 25px;
+    width: 370px;
+    display: inline-block;
+  }
+
+  .App-form-text{
+      height: 100px;
+      width: 370px;
+      border-radius: 5px;
+      display: inline-block;
+  }
+  .App-form-field {
+    height: 60px;
+    width: 370px;
+    border-radius: 5px;
+    display: inline-block;
+  }
